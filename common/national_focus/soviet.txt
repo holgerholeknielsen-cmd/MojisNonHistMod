@@ -1,6 +1,7 @@
 ﻿#hej_was_here
 #test2
 #phofers_is_the_goat
+#hej_and_moji_are_cool
 ### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
