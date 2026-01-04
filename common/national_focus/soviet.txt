@@ -1,4 +1,5 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+﻿#hej_was_here
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
