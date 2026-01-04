@@ -68,20 +68,20 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_autonomy_state"
-			position = { x = 230 y = 20 }
+			position = { x = 260 y = 20 }
 			font = "hoi_20b"
 			text = "[CPT_AUTONOMY_STATE]"
-			maxWidth = 190
+			maxWidth = 185
 			maxHeight = 23
 			format = center
 			alwaystransparent = yes
 		}
 		instantTextboxType = {
 			name = "cpt_autonomy_number"
-			position = { x = 230 y = 45 }
+			position = { x = 260 y = 45 }
 			font = "hoi_20b"
 			text = "CPT_AUTONOMY_NUMBER_TEXT"
-			maxWidth = 190
+			maxWidth = 185
 			maxHeight = 23
 			format = center
 			alwaystransparent = yes
@@ -412,7 +412,7 @@ guiTypes = {
 ##############################################
 		buttonType = {
 			name = "cpt_autonomy_reichskommissariat"
-			position = { x = 95 y = 90 }
+			position = { x = 95 y = 70 }
 			shortcut = "shift+w"			
 			spriteType = "GFX_cpt_reichskommissariat"
 			pdx_tooltip = "CPT_RKM_TT"
@@ -420,7 +420,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_reichskommissariat_text"
-			position = { x = 50 y = 150 }
+			position = { x = 50 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_KOMISSARIAT_TEXT"
 			maxWidth = 140
@@ -430,7 +430,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_reichsprotectorate"
-			position = { x = 180 y = 90 }
+			position = { x = 180 y = 70 }
 			shortcut = "shift+e"			
 			spriteType = "GFX_cpt_reichsprotectorate"
 			pdx_tooltip = "CPT_RPT_TT"
@@ -438,7 +438,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_reichsprotectorate_text"
-			position = { x = 135 y = 150 }
+			position = { x = 135 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_PROTECTORATE_TEXT"
 			maxWidth = 140
@@ -448,7 +448,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_satellite"
-			position = { x = 270 y = 90 }
+			position = { x = 270 y = 70 }
 			shortcut = "shift+a"			
 			spriteType = "GFX_cpt_satellite"
 			pdx_tooltip = "CPT_SAT_TT"
@@ -456,7 +456,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_satellite_text"
-			position = { x = 225 y = 150 }
+			position = { x = 225 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_SATELLITE_TEXT"
 			maxWidth = 140
@@ -466,7 +466,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_free_DoD"
-			position = { x = 355 y = 90 }
+			position = { x = 355 y = 70 }
 			shortcut = "shift+f"			
 			spriteType = "GFX_cpt_free"
 			pdx_tooltip = "CPT_FREE_TT"
@@ -474,7 +474,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_free_text_DoD"
-			position = { x = 310 y = 150 }
+			position = { x = 310 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_FREE_TEXT"
 			maxWidth = 140
@@ -485,7 +485,7 @@ guiTypes = {
 ##############################################
 		buttonType = {
 			name = "cpt_autonomy_wtt_imperial_protectorate"
-			position = { x = 105 y = 90 }
+			position = { x = 97 y = 70 }
 			shortcut = "shift+w"			
 			spriteType = "GFX_cpt_imperial_protectorate"
 			pdx_tooltip = "CPT_IPP_TT"
@@ -493,7 +493,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_wtt_imperial_protectorate_text"
-			position = { x = 60 y = 150 }
+			position = { x = 52 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_PROTECTORATE_TEXT"
 			maxWidth = 140
@@ -503,7 +503,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_wtt_imperial_associate"
-			position = { x = 227 y = 90 }
+			position = { x = 221 y = 70 }
 			shortcut = "shift+e"			
 			spriteType = "GFX_cpt_imperial_associate"
 			pdx_tooltip = "CPT_IPA_TT"
@@ -511,7 +511,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_wtt_imperial_associate_text"
-			position = { x = 182 y = 150 }
+			position = { x = 176 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_ASSOCIATE_TEXT"
 			maxWidth = 140
@@ -521,7 +521,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_free_imperial"
-			position = { x = 345 y = 90 }
+			position = { x = 345 y = 70 }
 			shortcut = "shift+f"			
 			spriteType = "GFX_cpt_free"
 			pdx_tooltip = "CPT_FREE_TT"
@@ -529,7 +529,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_free_text_imperial"
-			position = { x = 300 y = 150 }
+			position = { x = 300 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_FREE_TEXT"
 			maxWidth = 140
@@ -540,7 +540,7 @@ guiTypes = {
 ########################################
 		buttonType = {
 			name = "cpt_autonomy_wtt_imperial_protectorate_subject"
-			position = { x = 105 y = 90 }
+			position = { x = 105 y = 70 }
 			shortcut = "shift+w"			
 			spriteType = "GFX_cpt_imperial_protectorate"
 			pdx_tooltip = "CPT_IPP_TT"
@@ -548,7 +548,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_wtt_imperial_protectorate_text_subject"
-			position = { x = 60 y = 150 }
+			position = { x = 60 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_PROTECTORATE_TEXT"
 			maxWidth = 140
@@ -558,7 +558,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_wtt_imperial_associate_subject"
-			position = { x = 185 y = 90 }
+			position = { x = 185 y = 70 }
 			shortcut = "shift+e"			
 			spriteType = "GFX_cpt_imperial_associate"
 			pdx_tooltip = "CPT_IPA_TT"
@@ -566,7 +566,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_wtt_imperial_associate_text_subject"
-			position = { x = 140 y = 150 }
+			position = { x = 140 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_ASSOCIATE_TEXT"
 			maxWidth = 140
@@ -576,7 +576,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_wtt_imperial_subject"
-			position = { x = 265 y = 90 }
+			position = { x = 265 y = 70 }
 			shortcut = "shift+a"			
 			spriteType = "GFX_cpt_imperial_subject"
 			pdx_tooltip = "CPT_IPS_TT"
@@ -584,7 +584,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_wtt_imperial_subject_text"
-			position = { x = 220 y = 150 }
+			position = { x = 220 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_SUBJECT_TEXT"
 			maxWidth = 140
@@ -594,7 +594,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cpt_autonomy_free_imperial_subject"
-			position = { x = 345 y = 90 }
+			position = { x = 345 y = 70 }
 			shortcut = "shift+f"			
 			spriteType = "GFX_cpt_free"
 			pdx_tooltip = "CPT_FREE_TT"
@@ -602,7 +602,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "cpt_free_text_imperial_subject"
-			position = { x = 300 y = 150 }
+			position = { x = 300 y = 120 }
 			font = "hoi_16mbs"
 			text = "CPT_FREE_TEXT"
 			maxWidth = 140

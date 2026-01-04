@@ -1,0 +1,16 @@
+MAL_Malayan_Resistance = {
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = { 
+			OR = {
+				OWNER = { tag = ENG }
+				OWNER = { tag = MAL }
+			} 
+		}
+	}
+	icon = GFX_modifiers_generic_resistance
+	local_manpower = -0.7
+	local_supplies = -0.7
+	local_resources_factor = -0.7
+	required_garrison_factor = 1.75
+}

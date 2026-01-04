@@ -1,0 +1,155 @@
+add_namespace = MongolianSubmitionEvent
+	country_event = {
+
+    	id = MongolianSubmitionEvent.1
+    	title = MongolianSubmitionEvent.1.t
+	    desc = MongolianSubmitionEvent.1.d
+
+		fire_only_once = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = { days = 10 }
+
+	    picture = GFX_report_event_generic_diplomatic
+
+		option = {
+			name = MongolianSubmitionEvent.1.a
+			SOV = { country_event = { id = MongolianSubmitionEvent.2}}
+			ai_chance = {factor = 65}	
+		}
+		option = {
+			name = MongolianSubmitionEvent.1.b
+			SOV = { country_event = { id = MongolianSubmitionEvent.3}}
+			ai_chance = {factor = 35}			
+		}
+	}
+	country_event = {
+		id = MongolianSubmitionEvent.2
+		title = MongolianSubmitionEvent.2.t
+	    desc = MongolianSubmitionEvent.2.d
+		fire_only_once = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = { days = 10 }
+
+	    picture = GFX_report_event_generic_diplomatic
+		option = {
+			name = MongolianSubmitionEvent.2.a
+			annex_country = {
+				target = MON
+			}
+			ai_chance = {factor = 100}
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_compliance = 50
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 50
+		}
+	}
+	country_event = {
+		id = MongolianSubmitionEvent.3
+		title = MongolianSubmitionEvent.3.t
+	    desc = MongolianSubmitionEvent.3.d
+		fire_only_once = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = { days = 10 }
+
+	    picture = GFX_report_event_generic_diplomatic
+		option = {
+			
+			name = MongolianSubmitionEvent.3.a
+			add_war_support = 0.05
+
+			remove_from_faction = MON
+
+			ai_chance = {factor = 50}
+			declare_war_on = {
+				target = MON
+				type = annex_everything
+			}
+			hidden_effect = {
+				MON = {
+					add_ideas = MEN_mongol_banners_idea
+					set_popularities = {
+						fascism = 10
+						communism = 50
+						neutrality = 40
+					}
+					set_politics = {
+						ruling_party =  neutrality
+						elections_allowed = no 
+					}
+					
+					division_template = {
+						name = "Mongolian Militia"
+						priority = 1
+						is_locked = yes
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+
+							militia = { x = 1 y = 0 }
+							militia = { x = 1 y = 1 }
+							militia = { x = 1 y = 2 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						add_dynamic_modifier = {
+							modifier = unplanned_offensive
+							days = 120
+						}
+					}
+				}
+				MON = {
+					add_ideas = war_economy
+					add_ideas = extensive_conscription
+				}
+			}
+		}
+		option = {
+			name = MongolianSubmitionEvent.3.b
+			ai_chance = {factor = 50}
+			add_war_support = -0.1
+			add_stability = -0.1
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_claim_by = SOV
+			}
+		}
+	}

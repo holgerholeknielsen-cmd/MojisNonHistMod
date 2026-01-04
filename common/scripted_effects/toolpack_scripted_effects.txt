@@ -3073,6 +3073,529 @@ tpt_remove_template_lock = {
 			is_locked = no
 		}
 	}
+	#SEA
+	#Mengukuo
+	if = {
+		limit = {
+			has_template = "Mongol Levy"
+		}
+		set_division_template_lock = {
+			division_template = "Mongol Levy"
+			is_locked = no
+		}
+	}
+	#Japan
+	if = {
+		limit = {
+			has_template = "Kantō-gun Hohei Shidan"
+		}
+		set_division_template_lock = {
+			division_template = "Kantō-gun Hohei Shidan"
+			is_locked = no
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+		}
+		set_division_template_lock = {
+			division_template = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+			is_locked = no
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Ashigaru Levy"
+		}
+		set_division_template_lock = {
+			division_template = "Ashigaru Levy"
+			is_locked = no
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Kokumin Giyū Sentōtai"
+		}
+		set_division_template_lock = {
+			division_template = "Kokumin Giyū Sentōtai"
+			is_locked = no
+		}
+	}
+	#Manchuria
+	if = {
+		limit = {
+			has_template = "Yong Ying"
+		}
+		set_division_template_lock = {
+			division_template = "Yong Ying"
+			is_locked = no
+		}
+	}
+	if = {
+		limit = {
+			has_template = "Rebel Forces"
+		}
+		set_division_template_lock = {
+			division_template = "Rebel Forces"
+			is_locked = no
+		}
+	}
+	#China
+	if = {
+		limit = {
+			has_template = "Blueshirt Militia"
+		}
+		set_division_template_lock = {
+			division_template = "Blueshirt Militia"
+			is_locked = no
+		}
+	}
+}
+sst_design_ship = {
+	meta_effect = {
+		text = {
+			if = {
+				limit = {
+					has_global_flag = sst_destroyer_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_light }
+					}
+					set_technology = {
+						early_ship_hull_light = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_light }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_light = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_light }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_light = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_light }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_light = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_destroyer_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Destroyer [EQ_LEVEL]"
+						type = ship_hull_light_[EQ_LEVEL]
+						modules = {	#Gabianno Class
+							fixed_ship_battery_slot = ship_light_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_sonar_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = light_ship_engine_1
+							fixed_ship_torpedo_slot = ship_torpedo_1
+							mid_1_custom_slot = ship_depth_charge_2
+							rear_1_custom_slot = ship_depth_charge_2
+							#front_1_custom_slot = ship_light_battery_2
+						}
+					}
+					set_country_flag = toolpack_has_destroyer_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_lc_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_cruiser }
+					}
+					set_technology = {
+						early_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_cruiser }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_cruiser }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_cruiser }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_lcruiser_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Light Cruiser [EQ_LEVEL]"
+						type = ship_hull_cruiser_[EQ_LEVEL]
+						modules = {	#from British AI
+							fixed_ship_battery_slot = ship_light_medium_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_1
+							fixed_ship_armor_slot = ship_armor_cruiser_1
+							mid_1_custom_slot = ship_torpedo_1
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = empty
+						}
+					}
+					set_country_flag = toolpack_has_lcruiser_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_hc_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_cruiser }
+					}
+					set_technology = {
+						early_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_cruiser }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_cruiser }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_cruiser }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_cruiser = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_hcruiser_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Heavy Cruiser [EQ_LEVEL]"
+						type = ship_hull_cruiser_[EQ_LEVEL]
+						modules = {
+							fixed_ship_battery_slot = ship_medium_battery_1	#should turn it into heavy
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_1
+							fixed_ship_armor_slot = ship_armor_cruiser_1
+							fixed_ship_secondaries_slot = empty
+							mid_1_custom_slot = ship_torpedo_1
+							mid_2_custom_slot = ship_medium_battery_1
+							rear_1_custom_slot = ship_mine_layer_1
+						}
+					}
+					set_country_flag = toolpack_has_hcruiser_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_bc_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_heavy }
+					}
+					set_technology = {
+						early_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_heavy }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_heavy }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_heavy }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_bcruiser_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Battlecruiser [EQ_LEVEL]"
+						type = ship_hull_heavy_[EQ_LEVEL]
+						modules = { #From Salami's class
+							fixed_ship_battery_slot = ship_heavy_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_1 
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = heavy_ship_engine_2 
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_bc_2 
+							front_1_custom_slot = ship_anti_air_1
+							mid_1_custom_slot = ship_secondaries_2
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = ship_heavy_battery_2 
+						}
+					}
+					set_country_flag = toolpack_has_bcruiser_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_bs_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_heavy }
+					}
+					set_technology = {
+						early_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_heavy }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_heavy }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_heavy }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_heavy = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_battleship_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Battleship [EQ_LEVEL]"
+						type = ship_hull_heavy_[EQ_LEVEL]
+						modules = { #random Greek battleship, with some edits
+							fixed_ship_battery_slot = ship_heavy_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_1 
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = heavy_ship_engine_1 
+							fixed_ship_secondaries_slot = ship_secondaries_1
+							fixed_ship_armor_slot = ship_armor_bb_1
+							front_1_custom_slot = ship_anti_air_1
+							mid_1_custom_slot = ship_secondaries_1 
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = empty
+						} 
+					}
+					set_country_flag = toolpack_has_battleship_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_carrier_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_carrier }
+					}
+					set_technology = {
+						early_ship_hull_carrier = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_carrier }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_carrier = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_carrier }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_carrier = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_carrier }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_carrier = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_carrier_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Carrier [EQ_LEVEL]"
+						type = [CARRIER_HULL]
+						modules = { #Joffre class
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_2
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							front_1_custom_slot = empty
+						}
+					}
+					set_country_flag = toolpack_has_carrier_design_[EQ_LEVEL]
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = sst_sub_enabled
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = early_ship_hull_submarine }
+					}
+					set_technology = {
+						early_ship_hull_submarine = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = basic_ship_hull_submarine }
+						has_global_flag = sst_y2_enabled
+					}
+					set_technology = {
+						basic_ship_hull_submarine = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = improved_ship_hull_submarine }
+						has_global_flag = sst_y3_enabled
+					}
+					set_technology = {
+						improved_ship_hull_submarine = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = advanced_ship_hull_submarine }
+						has_global_flag = sst_y4_enabled
+					}
+					set_technology = {
+						advanced_ship_hull_submarine = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = toolpack_has_submarine_design_[EQ_LEVEL]
+						}
+					}
+					create_equipment_variant = {
+						name = "Toolpack Submarine [EQ_LEVEL]"
+						type = ship_hull_submarine_[EQ_LEVEL]
+						modules = {	#taken from submarine_early
+							fixed_ship_engine_slot = sub_ship_engine_1
+							fixed_ship_torpedo_slot = ship_torpedo_sub_1
+							rear_1_custom_slot = empty
+						}
+					}
+					set_country_flag = toolpack_has_submarine_design_[EQ_LEVEL]
+				}
+			}
+		}
+		EQ_LEVEL = "[This.GetSSTShipTier]"
+		CARRIER_HULL = "[This.GetSSTCarrierTier]"	#Carriers dont start at 1 for MTG owners
+	}
 }
 sst_spawn_ship = {
 	meta_effect = {

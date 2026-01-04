@@ -2465,7 +2465,7 @@ focus_tree = {
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		available = {
 			OR = {
-				has_war_support > 0.45
+				has_war_support > 0.35
 				AND = {
 					OR = {
 						GER = { has_war_with_major = yes }
@@ -2474,7 +2474,6 @@ focus_tree = {
 						SOV = { has_war_with_major = yes }
 						ITA = { has_war_with_major = yes }
 					}
-					has_war_support > 0.3
 				}
 			}
 		}
@@ -4760,7 +4759,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4791,7 +4790,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1

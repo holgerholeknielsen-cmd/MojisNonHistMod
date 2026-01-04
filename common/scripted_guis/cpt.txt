@@ -566,6 +566,9 @@ scripted_gui = {
 					toolpack_cycle_action_log_variables = yes
 					add_to_array = { global.toolpack_mp_action_array_targets = THIS }
 					add_to_array = { global.toolpack_mp_action_array = 3 }
+
+					set_country_flag = MAN_assertiveness
+
 					var:puppeteer = {
 						puppet = PREV
 						set_autonomy = {
@@ -1267,14 +1270,6 @@ scripted_gui = {
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
 					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
-					}
 				}
 			}
 			cpt_wtt_imperial_protectorate_text_visible = {
@@ -1306,14 +1301,6 @@ scripted_gui = {
 						NOT = { tag = JAP }
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
-					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
 					}
 				}
 			}
@@ -1347,14 +1334,6 @@ scripted_gui = {
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
 					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
-					}
 				}
 			}
 			cpt_wtt_imperial_associate_text_visible = {
@@ -1386,14 +1365,6 @@ scripted_gui = {
 						NOT = { tag = JAP }
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
-					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
 					}
 				}
 			}
@@ -1427,14 +1398,6 @@ scripted_gui = {
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
 					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
-					}
 				}
 			}
 			cpt_free_text_imperial_visible = {
@@ -1466,14 +1429,6 @@ scripted_gui = {
 						NOT = { tag = MAN }
 						has_country_flag = cpt_puppetee
 					}
-					MAN = {
-						NOT = {
-							OR = {
-								has_country_flag = MAN_assertiveness
-								has_completed_focus = MAN_assertiveness
-							}
-						}
-					}
 				}
 			}
 ####################################################################
@@ -1495,10 +1450,6 @@ scripted_gui = {
 							has_country_flag = cpt_puppetee
 						}
 					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
-					}
 				}
 			}
 			cpt_wtt_imperial_protectorate_text_subject_visible = {
@@ -1518,10 +1469,6 @@ scripted_gui = {
 						any_other_country = {
 							has_country_flag = cpt_puppetee
 						}
-					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
 					}
 				}
 			}
@@ -1543,10 +1490,6 @@ scripted_gui = {
 							has_country_flag = cpt_puppetee
 						}
 					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
-					}
 				}
 			}
 			cpt_wtt_imperial_associate_text_subject_visible = {
@@ -1566,10 +1509,6 @@ scripted_gui = {
 						any_other_country = {
 							has_country_flag = cpt_puppetee
 						}
-					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
 					}
 				}
 			}
@@ -1591,10 +1530,6 @@ scripted_gui = {
 							has_country_flag = cpt_puppetee
 						}
 					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
-					}
 				}
 			}
 			cpt_wtt_imperial_subject_text_visible = {
@@ -1614,10 +1549,6 @@ scripted_gui = {
 						any_other_country = {
 							has_country_flag = cpt_puppetee
 						}
-					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
 					}
 				}
 			}
@@ -1639,10 +1570,6 @@ scripted_gui = {
 							has_country_flag = cpt_puppetee
 						}
 					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
-					}
 				}
 			}
 			cpt_free_text_imperial_subject_visible = {
@@ -1662,10 +1589,6 @@ scripted_gui = {
 						any_other_country = {
 							has_country_flag = cpt_puppetee
 						}
-					}
-					OR = {
-						has_country_flag = MAN_assertiveness
-						has_completed_focus = MAN_assertiveness
 					}
 				}
 			}

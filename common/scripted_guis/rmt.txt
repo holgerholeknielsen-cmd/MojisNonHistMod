@@ -96,6 +96,12 @@ scripted_gui = {
 			rmt_chromium_off_click = {
 				clr_global_flag = rmt_chromium_enabled
 			}
+			rmt_coal_on_click = {
+				set_global_flag = rmt_coal_enabled
+			}
+			rmt_coal_off_click = {
+				clr_global_flag = rmt_coal_enabled
+			}
 			rmt_state_modifier_on_click = {
 				set_global_flag = rmt_state_modifier_enabled
 			}
@@ -175,6 +181,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = 1
+						}
+					}
+					if = {
 						limit = { has_global_flag = rmt_state_modifier_enabled }
 						add_state_modifier = {
 							modifier = { local_resources = 0.01 }
@@ -227,6 +240,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = 1
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = 1
 							}
 						}
@@ -301,6 +321,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = 5
+						}
+					}
+					if = {
 						limit = { has_global_flag = rmt_state_modifier_enabled }
 						add_state_modifier = {
 							modifier = { local_resources = 0.05 }
@@ -353,6 +380,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = 5
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = 5
 							}
 						}
@@ -427,6 +461,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = 25
+						}
+					}
+					if = {
 						limit = { has_global_flag = rmt_state_modifier_enabled }
 						add_state_modifier = {
 							modifier = { local_resources = 0.25 }
@@ -479,6 +520,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = 25
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = 25
 							}
 						}
@@ -553,6 +601,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = 200
+						}
+					}
+					if = {
 						limit = { has_global_flag = rmt_state_modifier_enabled }
 						add_state_modifier = {
 							modifier = { local_resources = 2 }
@@ -605,6 +660,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = 200
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = 200
 							}
 						}
@@ -679,6 +741,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = -1
+						}
+					}
+					if = {
 						limit = {
 							has_global_flag = rmt_state_modifier_enabled
 							mrt_has_resources = yes
@@ -735,6 +804,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = -1
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = -1
 							}
 						}
@@ -813,6 +889,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = -5
+						}
+					}
+					if = {
 						limit = {
 							has_global_flag = rmt_state_modifier_enabled
 							mrt_has_resources = yes
@@ -869,6 +952,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = -5
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = -5
 							}
 						}
@@ -947,6 +1037,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = -25
+						}
+					}
+					if = {
 						limit = {
 							has_global_flag = rmt_state_modifier_enabled
 							mrt_has_resources = yes
@@ -1003,6 +1100,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = -25
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = -25
 							}
 						}
@@ -1081,6 +1185,13 @@ scripted_gui = {
 						}
 					}
 					if = {
+						limit = { has_global_flag = rmt_coal_enabled }
+						add_resource = {
+							type = coal
+							amount = -200
+						}
+					}
+					if = {
 						limit = {
 							has_global_flag = rmt_state_modifier_enabled
 							mrt_has_resources = yes
@@ -1137,6 +1248,13 @@ scripted_gui = {
 							limit = { has_global_flag = rmt_chromium_enabled }
 							add_resource = {
 								type = chromium
+								amount = -200
+							}
+						}
+						if = {
+							limit = { has_global_flag = rmt_coal_enabled }
+							add_resource = {
+								type = coal
 								amount = -200
 							}
 						}
@@ -1354,6 +1472,12 @@ scripted_gui = {
 			rmt_chromium_off_visible = {
 				has_global_flag = rmt_chromium_enabled
 			}
+			rmt_coal_on_visible = {
+				NOT = { has_global_flag = rmt_coal_enabled }
+			}
+			rmt_coal_off_visible = {
+				has_global_flag = rmt_coal_enabled
+			}
 			rmt_state_modifier_on_visible = {
 				NOT = { has_global_flag = rmt_state_modifier_enabled }
 			}
@@ -1382,6 +1506,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1394,6 +1519,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1412,6 +1538,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1424,6 +1551,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1442,6 +1570,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1454,6 +1583,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1472,6 +1602,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1484,6 +1615,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1502,6 +1634,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1514,6 +1647,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1532,6 +1666,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1544,6 +1679,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1562,6 +1698,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1574,6 +1711,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled
@@ -1592,6 +1730,7 @@ scripted_gui = {
 							has_global_flag = rmt_alu_enabled
 							has_global_flag = rmt_tungsten_enabled
 							has_global_flag = rmt_chromium_enabled
+							has_global_flag = rmt_coal_enabled
 							has_global_flag = rmt_state_modifier_enabled
 						}
 						NOT = { has_global_flag = rmt_var_1_enabled }
@@ -1604,6 +1743,7 @@ scripted_gui = {
 						NOT = { has_global_flag = rmt_alu_enabled }
 						NOT = { has_global_flag = rmt_tungsten_enabled }
 						NOT = { has_global_flag = rmt_chromium_enabled }
+						NOT = { has_global_flag = rmt_coal_enabled }
 						NOT = { has_global_flag = rmt_state_modifier_enabled }
 						OR = {
 							has_global_flag = rmt_var_1_enabled

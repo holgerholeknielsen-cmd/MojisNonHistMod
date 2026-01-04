@@ -18,7 +18,7 @@
 
  CRT_TOGGLE_COUP_ON_TT: "§GEnable§! §Hforcing government for this country§!"
  CRT_TOGGLE_COUP_OFF_TT: "§RDisable§! §Hforcing government for this country§!"
- CRT_TOGGLE_PUPPETING_ON_TT: "§GEnable§! §Hpuppeting joining for this country§!"
+ CRT_TOGGLE_PUPPETING_ON_TT: "§GEnable§! §Hpuppeting for this country§!"
  CRT_TOGGLE_PUPPETING_OFF_TT: "§RDisable§! §Hpuppeting for this country§!"
 
  CRT_INFLUENCE_CATEGORY: "Influence"

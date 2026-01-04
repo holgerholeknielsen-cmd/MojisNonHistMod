@@ -1,28 +1,7 @@
 ideas = {
-    country = {
-		ManchurianJapaneseCooperation = {
-			
-			allowed = {
-            	always = yes
-        	}
-
-			picture = generic_infantry_equipment_manufacturer_2
-
-        	modifier = {
-				autonomy_gain = 2
-				overlord_trade_cost_factor = -0.50
-				autonomy_gain_trade_factor = 0.75
-				license_subject_master_purchase_cost = -1
-        	}
-		}
-	}
 	country = {
 		GreeceManpowerInfinite = {
-			allowed = {
-				always = yes
-			}
 			picture = service_by_requirement
-
 			modifier = {
 				weekly_manpower = 500
 				political_power_factor = 0.1
@@ -41,9 +20,6 @@ ideas = {
 			modifier = {
 				weekly_manpower = 1000
 				political_power_factor = 0.15
-				infantry_attack_factor = 0.15
-				infantry_defence_factor = 0.15
-				infantry_speed_factor = 0.05
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
 				breakthrough_factor = 0.15
@@ -60,17 +36,15 @@ ideas = {
 				production_speed_arms_factory_factor = -0.15
 			}
 		}		
-	}		
+	}
 	country = {
-		a_strong_successor_to_the_fuhrer = {
-			picture = generic_fascism_drift_bonus
+		britishConvoying = {
 			allowed = {
 				always = yes
 			}
+			picture = GFX_SOV_surface_warfare_ccp_2d_sov_compatibility
 			modifier = {
-				production_speed_buildings_factor = 0.10
-				production_factory_max_efficiency_factor = 0.20
-				max_command_power_mult = 0.50
+				convoy_escort_efficiency = 0.5
 			}
 		}
 	}

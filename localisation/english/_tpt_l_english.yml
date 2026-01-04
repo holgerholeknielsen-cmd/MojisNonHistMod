@@ -3,9 +3,9 @@
  TPT_TAB_SWITCHER_TT:0 "Switch tabs using §gshift + x§!"
  TPT_ACTIVITY_ON:0 "Politics Tool: £trigger_no"
  TPT_ACTIVITY_OFF:0 "Politics Tool: £trigger_yes"
- TPT_ACTOR_NAME:0 "§H[From.Owner.GetName]§!"
- tpt_autotarget_1:0 "Autotarget: None"
- tpt_autotarget_2:0 "AT: §0[tpt_autotarget.GetName]§!"
+ TPT_ACTOR_NAME:0 "§H[From.GetName]§!"
+ 
+ 
  TPT_CLOSE_WINDOW:0 "Close"
  
  
@@ -149,9 +149,8 @@
  tpt_major_yes:0 "Major: Yes"
  tpt_major_no:0 "Major: No"
  
- #TPT_SELECT_AUTOTARGET_TT:0 "§HMark selected country as §0Autotarget§!§!\n\nThe first command in the list will be executed:\n" #duplicate, I have no clue how the other works
- TPT_SELECT_AUTOTARGET:0 "§HMark selected country as §0Autotarget§!§!"
- TPT_AUTOTARGET:0 "§HThis country has been marked as §0Autotarget§!§!"
+ 
+ 
  TPT_UNDO:0 "§HUndo Actions§! (§RWIP§!)"
  TPT_CREATE_FACTION:0 "§HCreate Faction§!\n\n"
  TPT_DISMANTLE_FACTION:0 "§HDismantle Faction§!\n\n"
@@ -202,8 +201,8 @@
  TPT_NAP_TT: "[!tpt_nap_click]"
  TPT_UNNAP_TT: "[!tpt_no_nap_click]"
  TPT_REMOVE_ALL_NAPS_TT: "[!tpt_remove_all_naps_click]"
- TPT_SELECT_AUTOTARGET_TT: "[!tpt_remove_all_naps_click]"
- TPT_AUTOTARGET_TT: "[!tpt_remove_all_naps_click]"
+ 
+ 
  TPT_UNDO_TT: "[!tpt_remove_all_naps_click]"
  TPT_CREATE_FACTION_TT: "[!tpt_create_faction_click]"
  TPT_DISMANTLE_FACTION_TT: "[!tpt_dismantle_faction_click]"
@@ -225,7 +224,7 @@
  TPT_TRADE_TEXT:0 "Trade"
  TPT_WORLD_TENSION_TEXT:0 "World Tension:"
  
- #DIPLOMACY_MILACC:0 "receiving military access"  #duplicate with base game and seemingly unused
+ 
  
  TPT_AT_EXPLANATION:0 "§HIf no country is marked with the §Gnormal (green) marking button§!, a selected country will perform actions in relation to the §0Autotarget§!.§!"
  

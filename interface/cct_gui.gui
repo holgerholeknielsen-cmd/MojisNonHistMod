@@ -28,7 +28,7 @@ guiTypes = {
 			name = "cct_country_name"
 			position = {x = 23 y = 16 }
 			font = "hoi_18mbs"
-			text = "CAT_COUNTRY_NAME"
+			text = "TPT_ACTOR_NAME"
 			maxWidth = 260
 			maxHeight = 23
 			format = left

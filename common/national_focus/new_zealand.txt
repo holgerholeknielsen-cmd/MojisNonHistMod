@@ -69,7 +69,7 @@
 		x = 16
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -112,7 +112,7 @@
 		y = 1
 		relative_position_id = NZL_transfer_the_new_zealand_division
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -154,7 +154,7 @@
 		y = 2
 		relative_position_id = NZL_transfer_the_new_zealand_division
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -225,7 +225,7 @@
 		y = 2
 		relative_position_id = NZL_transfer_the_new_zealand_division
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -400,7 +400,7 @@
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}
@@ -925,7 +925,7 @@
 			284 = {
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 33
 				}
 			}
 		}
@@ -939,7 +939,7 @@
 		y = 1
 		relative_position_id = NZL_national_roads_board
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -962,7 +962,7 @@
 			284 = {
 				add_resource = {
 					type = oil
-					amount = 5
+					amount = 23
 				}
 			}
 		}
@@ -976,7 +976,7 @@
 		y = 1
 		relative_position_id = NZL_national_roads_board
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1422,7 +1422,7 @@
 		x = 30
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1460,7 +1460,7 @@
 		y = 1
 		relative_position_id = NZL_army_reforms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1501,7 +1501,7 @@
 		y = 1
 		relative_position_id = NZL_army_reforms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1561,7 +1561,7 @@
 		y = 2
 		relative_position_id = NZL_army_reforms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1627,7 +1627,7 @@
 		y = 2
 		relative_position_id = NZL_army_reforms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1732,7 +1732,7 @@
 			add_tech_bonus = {
 				name = NZL_artillery_focus
 				bonus = 1.00
-				uses = 1
+				uses = 3
 				category = artillery
 			}
 		}
@@ -1836,6 +1836,7 @@
 		}
 	}
 
+
 	############################
 	##### POLITICS SECTION #####
 	############################
@@ -1846,7 +1847,7 @@
 		x = 4
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1882,7 +1883,7 @@
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1935,10 +1936,10 @@
 
 		completion_reward = {
 			284 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 5
 			}
 			723 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 5
 			}
 			add_stability = -0.05
 		}
@@ -2037,10 +2038,10 @@
 
 		completion_reward = {
 			284 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 			}
 			723 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 			}
 			add_stability = -0.05
 		}
@@ -2841,4 +2842,5 @@
 			}	
 		}	
 	}
+
 }		

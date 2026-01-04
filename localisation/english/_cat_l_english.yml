@@ -1,6 +1,6 @@
 ﻿l_english:
  
- CAT_COUNTRY_NAME:0 "§Y[From.Owner.GetName]§!"
+ 
  CAT_OPEN:0 "§HActivate 'Country Annexing Tool'§!"
  CAT_CLOSE:0 "§HDeactivate 'Country Annexing Tool'§!"
  CAT_ACTIVITY_ON:0 "Country Annexing Tool: £trigger_no"

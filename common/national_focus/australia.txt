@@ -67,7 +67,7 @@
 		x = 2
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -105,7 +105,7 @@
 		y = 1
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -150,7 +150,7 @@
 		y = 1
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -200,7 +200,7 @@
 		y = 2
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -236,7 +236,7 @@
 		y = 2
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -280,7 +280,7 @@
 		y = 2
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -318,7 +318,7 @@
 		y = 3
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -351,7 +351,7 @@
 		y = 4
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -393,7 +393,7 @@
 		y = 3
 		relative_position_id = AST_additional_militia_training
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -430,7 +430,7 @@
 		y = 4
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -472,7 +472,7 @@
 		y = 4
 		relative_position_id = AST_additional_militia_training
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -671,7 +671,7 @@
 		y = 1
 		relative_position_id = AST_introduce_unconventional_warfare
 
-		cost = 10`
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1533,9 +1533,8 @@
 		}
 
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 		
@@ -1605,9 +1604,8 @@
 		}
 
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 		
@@ -1692,12 +1690,19 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
+			
+			add_mastery_bonus = {
+				name = AST_protect_overseas_commerce
+				bonus = 0.1
+				days = 120
+				track = screens
+			}
+
 			add_doctrine_cost_reduction = {
 				name = AST_protect_overseas_commerce
 				cost_reduction = 0.25
 				uses = 2
-				category = fleet_in_being_tree
-				category = convoy_defense_tree
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1731,11 +1736,19 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
+			
+			add_mastery_bonus = {
+				name = AST_fly_the_jolly_roger
+				bonus = 0.1
+				days = 120
+				track = submarines
+			}
+
 			add_doctrine_cost_reduction = {
 				name = AST_fly_the_jolly_roger
 				cost_reduction = 0.25
-				uses = 2
-				category = submarine_doctrine
+				uses = 1
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1881,7 +1894,6 @@
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				category = cl_tech
 				category = ca_tech
 			}
 		}
@@ -1936,7 +1948,7 @@
 		x = 16
 		y = 0
 
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -1993,7 +2005,7 @@
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = industry
 			}			
 		}
@@ -2008,7 +2020,7 @@
 		y = 1
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -2078,7 +2090,7 @@
 		y = 2
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -2122,10 +2134,28 @@
 					}
 					NOT = { state = 674 }
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_south_australian_housing_trust_IC
+			}
+			random_owned_controlled_state = {
+				prioritize = { 285 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { state = 674 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = AST_south_australian_housing_trust_IC
@@ -2165,10 +2195,10 @@
 				limit = {
 					has_state_flag = AST_department_of_supply_and_development_AF
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2248,10 +2278,10 @@
 					}
 					NOT = { state = 674 }
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = AST_expand_lithgow_small_arms_factory_AF
@@ -2349,6 +2379,24 @@
 				}
 				set_state_flag = AST_allied_works_council_IC2
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes					
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { state = 674 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_allied_works_council_IC2
+			}
 		}
 	}
 
@@ -2360,7 +2408,7 @@
 		y = 4
 		relative_position_id = AST_standard_gauge_railway
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2384,7 +2432,24 @@
 				level = 2
 				path = { 7669 1431 12104 1454 }
 			}
-
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes					
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { state = 674 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = AST_allied_works_council_IC2
+			}
 
 		}
 	}
@@ -2563,7 +2628,7 @@
 		y = 1
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2594,7 +2659,7 @@
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2693,7 +2758,7 @@
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2995,7 +3060,7 @@
 		y = 3
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -3171,7 +3236,7 @@
 		x = 30
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3231,7 +3296,7 @@
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3294,7 +3359,7 @@
 		y = 1
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.2
@@ -3334,7 +3399,10 @@
 
 		completion_reward = {
 			ENG = {
-				country_event = { id = tfv_australia.1 }
+				country_event = { 
+					id = tfv_australia.1 
+					hours = 6
+				}
 			}
 		}
 	}
@@ -4042,7 +4110,11 @@
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = south_west_pacific_initiative
+			create_faction_from_template = {
+				template = faction_template_defensive_democratic
+				name = south_west_pacific_initiative
+				icon = GFX_faction_logo_generic_12
+			}
 			if = {
 				limit = {
 					has_completed_focus = AST_protect_the_dutch_colonies

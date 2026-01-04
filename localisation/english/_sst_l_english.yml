@@ -6,6 +6,9 @@
  SST_HELP:0 "Help"
  SST_DELETE:0 "§H§RDelete all§! ships of every selected kind §!(even the ones that are not spawned by the Toolpack)"
  SST_ENABLE_CONVOYS:0 "§HOpen or close the convoy window§!"
+
+ SST_designer_text: "To modify modules, adjust the design BEFORE using the spawn buttons."
+ SST_add_design: "Add design"
  
  SST_ADD_EXPERIENCE:0 "§HAdd §050§! Navy Experience.§!"
  SST_REMOVE_EXPERIENCE:0 "§HSet Navy Experience to §00§!.§!"
@@ -26,18 +29,6 @@
  DST_DE_sub:0 "§HDisable the spawning of §0submarines§!§!"
  
  SST_DESIGN_Y_TEXT:0 "Ship Design Tier"
-#  SST_EN_y1:0 "§HShips will spawn in the §0Atlantic§!§!"
-#  SST_DE_y1:0 "§HShips will not spawn in the §0Atlantic§!§!"
-#  SST_EN_y2:0 "§HShips will spawn in the §0Batlic Sea§!§!"
-#  SST_DE_y2:0 "§HShips will not spawn in the §0Batlic Sea§!§!"
-#  SST_EN_y3:0 "§HShips will spawn in the §0Black Sea§!§!"
-#  SST_DE_y3:0 "§HShips will not spawn in the §0Black Sea§!§!"
-#  SST_EN_y4:0 "§HShips will spawn in the §0Indian Ocean§!§!"
-#  SST_DE_y4:0 "§HShips will not spawn in the §0Indian Ocean§!§!"
-#  SST_EN_y5:0 "§HShips will spawn in the §0Mediterranean§!§!"
-#  SST_DE_y5:0 "§HShips will not spawn in the §0Mediterranean§!§!"
-#  SST_EN_y6:0 "§HShips will spawn in the §0Pacific§!§!"
-#  SST_DE_y6:0 "§HShips will not spawn in the §0Pacific§!§!"
 
  sst_y1_text: "Tier 1 (1922)"
  sst_y2_text: "Tier 2 (1936)"
@@ -64,12 +55,5 @@
  SST_BS_TEXT:0 "Battleship"
  SST_CARRIER_TEXT:0 "Carrier"
  SST_SUBMARINE_TEXT:0 "Submarine"
- 
- SST_ATLANTIC_TEXT:0 "Atlantic"
- SST_BALTICS_TEXT:0 "Baltic Sea"
- SST_BLACKS_TEXT:0 "Black Sea"
- SST_INDIAN_OCEAN_TEXT:0 "Indian Ocean"
- SST_MEDITERRANEAN_TEXT:0 "Mediterranean"
- SST_PACIFIC_TEXT:0 "Pacific"
  
  SST_CONVOYS_TEXT:0 "Convoys:"

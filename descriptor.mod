@@ -1,9 +1,7 @@
-version="1.3.1"
-picture="thumbnail.png"
+version="1.0"
 tags={
-	"Fixes"
-	"Decisions"
+	"Alternative History"
 }
-name="Moji's Non Hist Mod"
-supported_version="1.17.*"
+name="MojiNonHistModRework"
+supported_version="1.17.3.0"
 remote_file_id="3553569019"

@@ -159,6 +159,9 @@ scripted_gui = {
 				clr_global_flag = sst_y4_enabled
 			}
 ### SPAWN BUTTONS ###
+			sst_add_design_button_click = {
+				sst_design_ship = yes		#SCRIPTED EFFECTS
+			}
 			sst_spawn_1_click = {
 				toolpack_cycle_action_log_variables = yes
 				add_to_array = { global.toolpack_mp_action_array_targets = THIS }
@@ -425,7 +428,35 @@ scripted_gui = {
 				}
 				always = no
 			}
+### DESIGN BUTTONS ###
+			sst_designer_text_visible = {
+				has_dlc = "Man the Guns"
+			}
+			sst_add_design_button_visible = {
+				has_dlc = "Man the Guns"
+			}
+			sst_add_design_text_text_visible = {
+				has_dlc = "Man the Guns"
+			}
 ### SPAWN BUTTONS ###
+			sst_add_design_button_click_enabled = {
+				OR = {
+					has_global_flag = sst_y1_enabled
+					has_global_flag = sst_y2_enabled
+					has_global_flag = sst_y3_enabled
+					has_global_flag = sst_y4_enabled
+					has_global_flag = sst_y5_enabled
+				}
+				OR = {
+					has_global_flag = sst_destroyer_enabled
+					has_global_flag = sst_lc_enabled
+					has_global_flag = sst_hc_enabled
+					has_global_flag = sst_bc_enabled
+					has_global_flag = sst_bs_enabled
+					has_global_flag = sst_carrier_enabled
+					has_global_flag = sst_sub_enabled
+				}
+			}
 			sst_spawn_1_click_enabled = {
 				OR = {
 					has_global_flag = sst_y1_enabled

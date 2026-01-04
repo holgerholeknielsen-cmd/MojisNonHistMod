@@ -1396,22 +1396,41 @@ focus_tree = {
 			}
 			hidden_effect = { 
 				set_cosmetic_tag = GRE_stalinist
+			}
+			if = {
+				limit = {
+					TUR = {
+						exists = yes
+						NOT = {
+							is_ally_with = ROOT
+							is_ally_with = SOV
+						}
+					}
+					SOV = {
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
 				TUR = { 
 					country_event = { id = bftb_greece.29 days = 1 }
 				}
 				SOV = { 
-					country_event = { id = bftb_greece.29 days = 7 }
+					country_event = { id = bftb_greece.30 days = 7 }
 				}
-				add_opinion_modifier = {
-		    		target = TUR
-		    		modifier = GRE_strategic_enemy
-				}
-				TUR = { 
+				hidden_effect = {
 					add_opinion_modifier = {
-		   				target = GRE
-		   				modifier = GRE_strategic_enemy
+						target = TUR
+						modifier = GRE_strategic_enemy
 					}
-				}	
+					TUR = { 
+						add_opinion_modifier = {
+							target = GRE
+							modifier = GRE_strategic_enemy
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1512,7 +1531,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = GRE_corfu_cooperative
+			create_faction_from_template = {
+				template = faction_template_BUL_balkan_federation_of_socialist_republics
+				name = GRE_corfu_cooperative
+			}
 			if = { 
 				limit = { 
 					YUG = { 
@@ -1544,6 +1566,14 @@ focus_tree = {
 		id = GRE_secure_the_aegean
 		icon = GFX_focus_generic_attack_turkey
 		prerequisite = { focus = GRE_ally_tito }
+		available = {
+			TUR = { fascism > 0.3 }
+			OR = { 
+				TUR = { has_government = fascism }
+				TUR = { has_added_tension_amount > 5 }
+			}	
+			is_subject = no
+		}
 		x = 0
 		y = 1
 		relative_position_id = GRE_ally_tito
@@ -1578,9 +1608,10 @@ focus_tree = {
 		completion_reward = {
 			GRE = {
 				add_state_core = 341
-				add_state_core = 340
-				add_state_core = 339
-				add_state_core = 342
+				add_state_claim = 340
+				add_state_claim = 339
+				add_state_claim = 342
+				add_state_claim = 164
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = TUR
@@ -1702,6 +1733,9 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			SOV = {
+				has_country_flag = SOV_isolating_turkey
+			}
 		}
 
 		completion_reward = {
@@ -1713,8 +1747,8 @@ focus_tree = {
 	focus = {
 		id = GRE_revolutionaries_of_the_south
 		icon = GFX_goal_support_communism
-		prerequisite = { focus = GRE_stage_an_incident_in_the_bosporus }
-		x = 0
+		prerequisite = { focus = GRE_tow_the_stalinist_line }
+		x = 1
 		y = 1
 		relative_position_id = GRE_stage_an_incident_in_the_bosporus
 		cost = 10
@@ -2440,7 +2474,11 @@ focus_tree = {
 				}
 				GER = { 
 					set_rule = { can_create_factions = yes }
-					create_faction = "GER_central_powers_faction"
+					create_faction_from_template = {
+						template = faction_template_GER_mitteleuropa_alliance
+						name = GER_central_powers_faction
+						icon = GFX_faction_logo_generic_13
+					}
 					country_event = { id  = generic.2 days = 7 } 
 				}
 			}
@@ -2472,7 +2510,10 @@ focus_tree = {
 						}
 					}
 				}
-				create_faction = GRE_argos_alliance
+				create_faction_from_template = {
+					template = faction_template_generic_dominance
+					name = GRE_argos_alliance
+				}
 				HUN = { country_event = { id = generic.5 days = 7 } }
 			}
 			else_if = {
@@ -2492,7 +2533,10 @@ focus_tree = {
 						is_in_faction = no
 					}
 				}
-				create_faction = GRE_argos_alliance
+				create_faction_from_template = {
+					template = faction_template_generic_dominance
+					name = GRE_argos_alliance
+				}
 				AUS = { country_event = { id = generic.5 days = 7 } }
 			}
 			else = { 
@@ -2851,71 +2895,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = GRE_exite_in_crete
-		icon = GFX_SOV_the_means_to_wage_war_ccp_2d_sov_compatibility
-		prerequisite = {
-			focus = GRE_securing_the_bulgarian_menace
-			focus = GRE_the_greater_enosis
-		}
-		cost = 5
-		available = {
-			AND = {
-				is_in_faction = yes
-				OR = {
-					AND = {
-						has_capitulated = yes
-						controls_state = 182
-					}
-					surrender_progress > 0.1
-				}
-			}
-		}
-		relative_position_id = GRE_securing_the_bulgarian_menace
-		x = 0
-		y = 1
-		completion_reward = {
-			set_victory_points = {
-				province = 9940
-				value = 15
-			}
-			set_victory_points = {
-				province = 12058
-				value = 5
-			}
-			182 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = { type = coastal_bunker province = 9940 level = 4 instant_build = yes }
-				add_building_construction = { type = coastal_bunker province = 12058 level = 3 instant_build = yes }
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes}
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes}
-				add_building_construction = { type = infrastructure level = 4 instant_build = yes}
-				
-			}
-		}
-	}
-	focus = {
-		id = GRE_fortify_crete
-		prerequisite = {focus = GRE_exite_in_crete}
-		relative_position_id = GRE_exite_in_crete
-		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
-		cost = 10
-		x = 0
-		y = 1
-		available = {
-			controls_state = 182
-		}
-		completion_reward = {
-			182 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = { type = anti_air_building level = 3 instant_build = yes}	
-				add_building_construction = { type = air_base level = 5 instant_build = yes}
-			}
-			add_war_support = 0.1
-			add_stability = 0.1
-			add_ideas = GreeceManpowerInfinite
-		}
-	}
+
 	focus = {
 		id = GRE_expansion_of_athens_university
 		icon = GFX_goal_generic_scientific_exchange
@@ -4364,6 +4344,7 @@ focus_tree = {
 				}
 			}	
 			add_tech_bonus = {
+				name = GRE_increase_our_mining_operations
 				bonus = 1.0
 				uses = 2
 				category = excavation_tech
@@ -5674,11 +5655,11 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			}
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GRE_destroying_our_foes
-				cost_reduction = 0.25
-				uses = 1
-				category = strategic_destruction_tree
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_strategic_destruction
 			}
 			add_tech_bonus = {
 				name = GRE_destroying_our_foes
@@ -5706,16 +5687,17 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = GRE_protecting_our_skies
-				cost_reduction = 0.5
+				cost_reduction = 0.25
 				uses = 2
 				category = air_doctrine
 			}
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GRE_protecting_our_skies
-				cost_reduction = 0.25
-				uses = 1
-				category = battlefield_support_tree
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_battlefield_support
 			}
+			
 			add_tech_bonus = {
 				name = GRE_protecting_our_skies
 				bonus = 1.0
@@ -5913,6 +5895,74 @@ focus_tree = {
 				category = bb_tech
 			}
 		}
-	}		
+	}
+	
+	focus = {
+		id = GRE_exite_in_crete
+		icon = GFX_SOV_the_means_to_wage_war_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = GRE_securing_the_bulgarian_menace
+			focus = GRE_the_greater_enosis
+		}
+		cost = 5
+		available = {
+			AND = {
+				is_in_faction = yes
+				OR = {
+					AND = {
+						has_capitulated = yes
+						controls_state = 182
+					}
+					surrender_progress > 0.1
+				}
+			}
+		}
+		relative_position_id = GRE_securing_the_bulgarian_menace
+		x = 0
+		y = 1
+		completion_reward = {
+			set_victory_points = {
+				province = 9940
+				value = 15
+			}
+			set_victory_points = {
+				province = 12058
+				value = 5
+			}
+			182 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = { type = coastal_bunker province = 9940 level = 4 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 12058 level = 3 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes}
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes}
+				add_building_construction = { type = infrastructure level = 4 instant_build = yes}
+				
+			}
+		}
+	}
+	focus = {
+		id = GRE_fortify_crete
+		prerequisite = {focus = GRE_exite_in_crete}
+		relative_position_id = GRE_exite_in_crete
+		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+			controls_state = 182
+		}
+		completion_reward = {
+			182 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes}	
+				add_building_construction = { type = air_base level = 5 instant_build = yes}
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_ideas = GreeceManpowerInfinite
+		}
+	}
+
+
 
 }
